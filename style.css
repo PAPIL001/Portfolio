@@ -1,0 +1,263 @@
+body{
+    
+    background-image: linear-gradient(to right, #191f22,#131618,#0d0c0b,#060505,#000000);
+}
+:root{
+    --bg-color: linear-gradient(to left, #191f22,#131618,#0d0c0b,#060505,#000000);
+    --text-color: rgb(173, 170, 170);
+}
+/* header styling */
+header{
+    background-image: var(--bg-color);
+    width: 50%;
+    height: 5vh;
+    justify-self: center;
+    border-radius: 10px;
+    margin-top: 1%;
+    
+    }
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    border: 1.8px solid #131618;
+    border-radius: 10px;
+    padding: 0;
+}
+.nav a{
+    font-size: 1.5vw;
+    color: rgb(173, 170, 170);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 0.7;
+}
+.nav a:hover{
+    transition: all 0.3s ease-in-out;
+    color: white;
+    transform: scale(1.05);
+    font-weight: 300;
+}
+header:hover{
+    transform: scale(1.03);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 5px 5px -4px whitesmoke;
+    }
+
+/* hero styling */
+.two-section{
+    display: flex;
+}
+
+/* right */
+.tech-stack{
+    width: 50%;
+}
+.tech-stack h3{
+    color: rgb(173, 170, 170);
+}
+.tech-stack h3:hover{
+    color: white;
+    transition: all 0.5s ease-in;
+    font-weight: 300;
+}
+.tech-stack{
+    justify-items: center;
+    margin-top: 5%;
+}
+.stack{
+    width: 90%;
+    height: 20%;
+    background-image: linear-gradient(to left, #191f22,#131618,#0d0c0b,#060505,#000000);
+    border-radius: 15px;
+}
+
+.header-bio {
+    color: #b0b0b0; /* Subtle grey text */
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: white; /* Make the technical terms pop */
+    font-weight: 500;
+}
+
+.aura-text {
+    display: block; /* Puts it on a new line */
+    margin-top: 5px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px; /* Adds that cinematic spacing */
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+.buttons{
+    display: flex;
+    width: 100%;
+    height: 5%;
+    justify-content: center;
+    gap: 10%;
+
+}
+ .resume-btn, .contact-btn{
+    width: 15%;
+    background-image: var(--bg-color);
+    box-shadow: 0 5px 5px -4px whitesmoke;
+    align-content: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.resume-btn:hover, .resume-txt:hover,
+ .contact-btn:hover, .contact-txt:hover{
+    transform: scale(1.02);
+    color: white;
+}
+.resume-txt, .contact-txt{
+    text-decoration: none;
+    color: #b0b0b0;
+}
+
+
+/* left */
+.container{
+    height: 80vh;
+    width: 50%;
+    align-content: start;
+    justify-items: start;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+.container .image{
+    width: 30%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: black;
+    
+}
+.image img{
+    object-fit: cover;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    border: 5px solid black;
+    transition: all 0.5s ease-in-out;
+}
+.image img:hover{
+    transform: scale(1.02);
+    box-shadow: 0 10px 10px -4px whitesmoke;
+}
+.heading h1 strong{
+    color: rgb(173, 170, 170);
+    border: 2px solid rgb(173, 170, 170);
+}
+.heading{
+    color: rgb(70, 68, 68);
+}
+.heading h1 strong:hover{
+    color: white;
+    transition: all 0.5s ease-in-out;
+    border-color: white;
+}
+.heading h2 em{
+    color: rgb(173, 170, 170);
+}
+.heading h2 em:hover{
+    color: white;
+    transition: all 0.5s ease-in;
+    font-weight: 300;
+}
+
+
+
+
+
+/* hero icons */
+
+.icon-link {
+    position: relative; 
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 15px; 
+}
+
+/* The Label (Hidden by default) */
+.icon-link::after {
+    content: attr(data-label); /* Pulls text from HTML */
+    position: absolute;
+    bottom: -45px; /* Pushes label down. Adjust this if it overlaps */
+    left: 50%;
+    transform: translateX(-50%); /* Centers label horizontally */
+    
+    /* Visual settings */
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Keeps text on one line */
+    opacity: 0; 
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    pointer-events: none;
+}
+
+/* Hover Effects */
+.icon-link:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -45px; /* distinct "drop down" animation effect */
+}
+
+.icon-link:hover::before {
+    opacity: 1;
+    bottom: -15px; /* Keeps arrow attached to label */
+}
+
+.icon-link:hover i {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+@media (max-width: 768px) {
+    /* 1. Stack the main sections vertically */
+    .two-section {
+        flex-direction: column;
+        align-items: center; /* Center everything */
+    }
+
+    /* 2. Make them full width */
+    .container, .tech-stack {
+        width: 90%; /* Give them breathing room */
+        margin-left: 0; /* Remove left margin centering issue */
+        height: auto; /* Let height adjust automatically */
+        text-align: center; /* Center text for mobile */
+    }
+
+    /* 3. Adjust the Nav for small screens */
+    header {
+        width: 90%; /* Wider nav on mobile looks better */
+    }
+    
+    .nav a {
+        font-size: 4vw; /* Make text readable on phone */
+    }
+}
+
+
+
+
+
+
+
