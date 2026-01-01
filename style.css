@@ -131,7 +131,7 @@ header:hover{
     height: 80vh;
     width: 50%;
     align-content: start;
-    justify-items: start;
+    justify-items: center;
     margin-left: 3%;
     margin-top: 5%;
 }
@@ -161,6 +161,7 @@ header:hover{
 }
 .heading{
     color: rgb(70, 68, 68);
+    font-size: 2rem;
 }
 .heading h1 strong:hover{
     color: white;
@@ -244,6 +245,20 @@ header:hover{
         height: auto; /* Let height adjust automatically */
         text-align: center; /* Center text for mobile */
     }
+    .container{
+        justify-items: center;
+        margin-right: 0;
+    }
+    .container .image{
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+    .heading h1,.heading h2{
+        font-size: 2rem; 
+    }
+    .icon-link{
+        padding: 0.5rem;
+    }
 
     /* 3. Adjust the Nav for small screens */
     header {
@@ -252,6 +267,16 @@ header:hover{
     
     .nav a {
         font-size: 4vw; /* Make text readable on phone */
+    }
+    .resume-btn, .contact-btn{
+        padding: 0.2rem 0.5rem;
+        width: auto;
+    }
+    .stack{
+        width: 80%;
+        height: 50%;
+        display: inline-block;
+        margin: 1rem;
     }
 }
 
