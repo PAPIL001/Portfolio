@@ -1,5 +1,5 @@
 body{
-    
+    justify-items: center;
     background-image: linear-gradient(to right, #191f22,#131618,#0d0c0b,#060505,#000000);
 }
 :root{
@@ -27,7 +27,7 @@ header{
     padding: 0;
 }
 .nav a{
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     color: rgb(173, 170, 170);
     text-decoration: none;
     border-radius: 10px;
@@ -105,7 +105,8 @@ header:hover{
 
 }
  .resume-btn, .contact-btn{
-    width: 15%;
+    padding: 0.2rem 0.5rem;
+    width: auto;
     background-image: var(--bg-color);
     box-shadow: 0 5px 5px -4px whitesmoke;
     align-content: center;
@@ -139,8 +140,7 @@ header:hover{
     width: 30%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: black;
-    
+    background-color: black; 
 }
 .image img{
     object-fit: cover;
@@ -227,9 +227,36 @@ header:hover{
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+/* work experience */
+.work-ex{
+    height: auto;
+    width: 80%;
+    background-color: red;
+    justify-items: center;
+    border-radius: 20px;
+    background-image: var(--bg-color);
+}
+.work-ex h3{
+    justify-self: left;
+    padding: 2rem;
+    color: var(--text-color);
+}
+.work-ex .zynova{
+    width: 95%;
+    height: auto;
+    background-color: blue;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 10rem;
+    background-image: var(--bg-color);
+    box-shadow: 0 0px 10px 0 whitesmoke;
+}
+.duration{
+    
+}
 
 
-
+/* responsive design */
 
 @media (max-width: 768px) {
     /* 1. Stack the main sections vertically */
