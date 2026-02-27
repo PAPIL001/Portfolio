@@ -1,265 +1,974 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Papil Verma</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/6ff561ea07.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail"
-    />
-  </head>
-  <body>
-    <!-- header navbar -->
-    <header>
-      <div class="nav">
-        <a class="display-1" href="about">About</a>
-        <a class="display-1" href="projects">Projects</a>
-        <a class="display-1" href="contact">Contact</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papil Verma — Gotham's Full Stack Engineer</title>
+  <meta name="description"
+    content="Papil Verma — Full Stack Developer from Gotham City. Crafting interactive UI and scalable systems with precision." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/6ff561ea07.js" crossorigin="anonymous"></script>
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- tsParticles CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="enhancements.css" />
+</head>
+
+<body>
+
+  <!-- GOTHAM NEWS TICKER (F12) -->
+  <div id="news-ticker" aria-hidden="true">
+    <span class="ticker-label">BREAKING</span>
+    <div class="ticker-track-wrapper">
+      <div class="ticker-track">
+        <span>◆ PAPIL VERMA AVAILABLE FOR IMMEDIATE HIRE &nbsp;&nbsp;&nbsp;</span>
+        <span>◆ GOTHAM CITY DEVELOPER SHIPS PRODUCTION HEALTHCARE APP &nbsp;&nbsp;&nbsp;</span>
+        <span>◆ FULL STACK ENGINEER DEPLOYS CLOUD INFRASTRUCTURE ON AZURE + GCP &nbsp;&nbsp;&nbsp;</span>
+        <span>◆ BATMAN PORTFOLIO RECEIVES 100/100 CINEMATIC SCORE &nbsp;&nbsp;&nbsp;</span>
+        <span>◆ ZYNOVA REMEDIES FULLSTACK ENGINEER SEEKS NEW MISSION &nbsp;&nbsp;&nbsp;</span>
+        <span>◆ ENTITYGRAPH AI TOOL SUCCESSFULLY PROCESSES 10K+ DOCUMENTS &nbsp;&nbsp;&nbsp;</span>
+        <span>◆ PAPIL VERMA AVAILABLE FOR IMMEDIATE HIRE &nbsp;&nbsp;&nbsp;</span>
+        <span>◆ GOTHAM CITY DEVELOPER SHIPS PRODUCTION HEALTHCARE APP &nbsp;&nbsp;&nbsp;</span>
+        <span>◆ FULL STACK ENGINEER DEPLOYS CLOUD INFRASTRUCTURE ON AZURE + GCP &nbsp;&nbsp;&nbsp;</span>
+        <span>◆ BATMAN PORTFOLIO RECEIVES 100/100 CINEMATIC SCORE &nbsp;&nbsp;&nbsp;</span>
       </div>
-    </header>
+    </div>
+  </div>
 
-    <!-- hero section -->
-    <div class="two-section">
-      <div class="container">
-        <div class="image">
-          <img src="media/Dp.webp" class="img-fluid" alt="dp" />
+  <!-- BOOT SEQUENCE OVERLAY -->
+  <div id="boot-screen" aria-hidden="true">
+    <div class="boot-content">
+      <div class="boot-bat">
+        <!-- Dark Knight accurate bat logo -->
+        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M 600,650 C 540,450 430,400 320,420 C 290,300 190,220 40,180 C 190,130 380,150 500,250 L 570,120 L 570,200 L 630,200 L 630,120 L 700,250 C 820,150 1010,130 1160,180 C 1010,220 910,300 880,420 C 770,400 660,450 600,650 Z"
+            fill="#000000" stroke="#e08a22" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="8" />
+        </svg>
+      </div>
+      <div class="boot-lines">
+        <div class="boot-line" style="--delay:0.2s">[ GOTHAM CITY MAINFRAME — INITIALIZING... ]</div>
+        <div class="boot-line" style="--delay:0.6s">&gt; Loading identity profile: <span class="boot-yellow">PAPIL
+            VERMA</span></div>
+        <div class="boot-line" style="--delay:1.0s">&gt; Skill modules: <span class="boot-yellow">ONLINE</span></div>
+        <div class="boot-line" style="--delay:1.4s">&gt; Initiating portfolio systems... <span
+            class="boot-yellow">READY</span></div>
+        <div class="boot-line" style="--delay:1.8s">[ <span class="boot-yellow">ACCESS GRANTED</span> ] — Welcome to the
+          Batcave.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARTICLES CONTAINER -->
+  <div id="tsparticles"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor-bat" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 600,650 C 540,450 430,400 320,420 C 290,300 190,220 40,180 C 190,130 380,150 500,250 L 570,120 L 570,200 L 630,200 L 630,120 L 700,250 C 820,150 1010,130 1160,180 C 1010,220 910,300 880,420 C 770,400 660,450 600,650 Z"
+        fill="none" stroke="#e08a22" stroke-width="18" stroke-linejoin="miter" stroke-miterlimit="8" />
+    </svg>
+  </div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- FIXED BAT WATERMARK -->
+  <div class="bat-watermark" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 600,650 C 540,450 430,400 320,420 C 290,300 190,220 40,180 C 190,130 380,150 500,250 L 570,120 L 570,200 L 630,200 L 630,120 L 700,250 C 820,150 1010,130 1160,180 C 1010,220 910,300 880,420 C 770,400 660,450 600,650 Z"
+        fill="#000000" stroke="#e08a22" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="8" />
+    </svg>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo-link" aria-label="Home">
+        <svg class="nav-bat" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M 600,650 C 540,450 430,400 320,420 C 290,300 190,220 40,180 C 190,130 380,150 500,250 L 570,120 L 570,200 L 630,200 L 630,120 L 700,250 C 820,150 1010,130 1160,180 C 1010,220 910,300 880,420 C 770,400 660,450 600,650 Z"
+            fill="#000000" stroke="#e08a22" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="8" />
+        </svg>
+        <span class="nav-brand">PV</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#arsenal" class="nav-link" data-section="arsenal">Skills</a></li>
+        <li><a href="#case-files" class="nav-link" data-section="case-files">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#intel" class="nav-link" data-section="intel">About</a></li>
+        <li><a href="#signal" class="nav-link" data-section="signal">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <!-- Bat Signal Spotlight -->
+    <div class="hero-spotlight" id="hero-spotlight" aria-hidden="true"></div>
+    <!-- Hex grid overlay -->
+    <div class="hex-grid-overlay" aria-hidden="true"></div>
+
+    <!-- WANTED POSTER OVERLAY (F9) -->
+    <div id="wanted-overlay" aria-hidden="true">
+      <div class="wanted-frame">
+        <div class="wanted-top">
+          <span class="wanted-jurisdiction">GOTHAM CITY DEPARTMENT OF TALENT</span>
+          <h2 class="wanted-title">WANTED</h2>
+          <span class="wanted-subtitle">FOR EXCEPTIONAL ENGINEERING</span>
         </div>
-
-        <div class="heading">
-          <p class="lead">Hii, this is...</p>
-          <h1 class="display-1">
-            <strong>Papil Verma.</strong>
-          </h1>
-          <p class="lead">I'm a...</p>
-          <h2 class="display-2"><em>"Full Stack Dev".</em></h2>
+        <div class="wanted-photo-border">
+          <img src="media/Dp.webp" alt="" class="wanted-photo" />
         </div>
+        <div class="wanted-info">
+          <p class="wanted-name">PAPIL VERMA</p>
+          <p class="wanted-charge">CHARGE: BUILDING SCALABLE SYSTEMS</p>
+          <p class="wanted-reward">REWARD: HIRE IMMEDIATELY</p>
+        </div>
+      </div>
+    </div>
 
-        <div class="contact-icons">
-          <a href="" class="icon-link" data-label="Instagram">
-            <i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff"></i>
-          </a>
-
-          <a href="" class="icon-link" data-label="Gmail">
-            <i class="fa-regular fa-envelope fa-2xl" style="color: #ffffff"></i>
-          </a>
-
-          <a
-            href="https://github.com/PAPIL001"
-            class="icon-link"
-            data-label="Github"
-          >
-            <i class="fa-brands fa-github fa-2xl" style="color: #ffffff"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/papil-verma-0a0181337/"
-            class="icon-link"
-            data-label="LinkedIn"
-          >
-            <i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff"></i>
-          </a>
+    <div class="hero-inner">
+      <!-- Left: Profile Panel -->
+      <div class="hero-profile">
+        <div class="hex-frame" id="profile-hex">
+          <img src="media/Dp.webp" alt="Papil Verma — Full Stack Engineer" class="profile-img" />
+        </div>
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          AVAILABLE FOR HIRE &nbsp;—&nbsp; GOTHAM CITY
         </div>
       </div>
 
-      <div class="tech-stack">
-        <div class="heading">
-          <h3 class="display-4">Tech-Stack</h3>
+      <!-- Right: Bio Panel -->
+      <div class="hero-bio">
+        <p class="hero-init">
+          <span class="terminal-comment">// Hello, World.</span>
+        </p>
+        <h1 class="hero-name" id="hero-name">
+          PAPIL<br />VERMA
+        </h1>
+        <div class="hero-role-badge">
+          <span class="role-label">FULL STACK ENGINEER</span>
+          <span class="role-title">Building scalable web systems</span>
         </div>
-        <div class="stack">
-          <!-- all icons of tech stack -->
+        <div class="hero-socials">
+          <a href="mailto:papil.verma.5@gmail.com" class="social-btn" id="social-gmail" aria-label="Gmail">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a href="https://github.com/PAPIL001" class="social-btn" id="social-github" target="_blank" rel="noopener"
+            aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/papil-verma-0a0181337/" class="social-btn" id="social-linkedin"
+            target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://leetcode.com/u/vpapil/" class="social-btn" id="social-leetcode" target="_blank"
+            rel="noopener" aria-label="LeetCode">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" aria-hidden="true">
+              <path
+                d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+            </svg>
+          </a>
+        </div>
+        <div class="hero-ctas">
+          <a href="https://drive.google.com/file/d/1rmVV_Hu-P17HWaiYD48w9gHd3v1B1O4Y/view?usp=sharing"
+            class="cta-btn cta-primary magnetic-btn" id="btn-resume" target="_blank" rel="noopener">
+            <span>View Resume</span>
+            <i class="fa-solid fa-file-arrow-down"></i>
+          </a>
+          <a href="#signal" class="cta-btn cta-secondary magnetic-btn" id="btn-contact">
+            <span>Contact Me</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Easter Egg Banner (Right Aligned Desktop, Stacked Mobile) -->
+    <div class="hero-easter-egg-banner" data-animate="fade-up" style="--delay:0.5s">
+      <div class="banner-icon">
+        <i class="fa-solid fa-terminal"></i>
+      </div>
+      <div class="banner-text">
+        <span class="banner-title">IMPORTANT INSTRUCTION:</span>
+        <span class="banner-desc">Type <kbd>BATMAN</kbd> anywhere to access the Bat-Computer.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS (TECH STACK) -->
+  <section id="arsenal" class="arsenal-section">
+    <div class="section-label">SKILLS</div>
+    <h2 class="section-title" data-animate="fade-up">TECH STACK</h2>
+    <p class="section-sub" data-animate="fade-up" style="--delay:0.1s">LANGUAGES · FRAMEWORKS · CLOUD PLATFORMS</p>
+
+    <div class="arsenal-grid" data-animate="fade-up" style="--delay:0.2s">
+      <div class="tech-icon" data-label="Python" data-hud="[PYTHON v3.x]" style="--i:0">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />
+      </div>
+      <div class="tech-icon" data-label="Java" data-hud="[JAVA v17]" style="--i:1">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" />
+      </div>
+      <div class="tech-icon" data-label="C" data-hud="[C LANGUAGE]" style="--i:2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" />
+      </div>
+      <div class="tech-icon" data-label="HTML5" data-hud="[HTML5 — WEB]" style="--i:3">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" />
+      </div>
+      <div class="tech-icon" data-label="CSS3" data-hud="[CSS3 — STYLE]" style="--i:4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" />
+      </div>
+      <div class="tech-icon" data-label="JavaScript" data-hud="[JS ES6+]" style="--i:5">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+          alt="JavaScript" />
+      </div>
+      <div class="tech-icon" data-label="Django" data-hud="[DJANGO v4]" style="--i:6">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg"
+          alt="Django" style="filter:invert(1) sepia(1) saturate(3) hue-rotate(80deg);" />
+      </div>
+      <div class="tech-icon" data-label="Node.js" data-hud="[NODE.JS v20]" style="--i:7">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+      </div>
+      <div class="tech-icon" data-label="Express" data-hud="[EXPRESS JS]" style="--i:8">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="Express"
+          style="filter:invert(1);" />
+      </div>
+      <div class="tech-icon" data-label="MongoDB" data-hud="[MONGODB — DB]" style="--i:9">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+          alt="MongoDB" />
+      </div>
+      <div class="tech-icon" data-label="Google Cloud" data-hud="[GCP — CLOUD]" style="--i:10">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+          alt="Google Cloud" />
+      </div>
+      <div class="tech-icon" data-label="Microsoft Azure" data-hud="[AZURE — CLOUD]" style="--i:11">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+          alt="Microsoft Azure" />
+      </div>
+    </div>
+
+    <!-- Arsenal View Toggle (F3) -->
+    <div class="arsenal-view-toggle">
+      <button class="view-btn active" id="btn-icon-view" aria-pressed="true">[ ICON VIEW ]</button>
+      <button class="view-btn" id="btn-system-view" aria-pressed="false">[ SYSTEM VIEW ]</button>
+    </div>
+
+    <!-- Skill Bars Grid (F3) — hidden by default -->
+    <div class="skill-bars-grid" id="skill-bars-grid" aria-hidden="true">
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">HTML5 / CSS3</span><span
+            class="skill-bar-pct">92%</span></div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="92"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">Python</span><span class="skill-bar-pct">90%</span>
+        </div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="90"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">JavaScript</span><span class="skill-bar-pct">85%</span>
+        </div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="85"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">React.js</span><span class="skill-bar-pct">80%</span>
+        </div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="80"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">Node.js</span><span class="skill-bar-pct">80%</span>
+        </div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="80"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">Express.js</span><span class="skill-bar-pct">80%</span>
+        </div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="80"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">Django</span><span class="skill-bar-pct">75%</span>
+        </div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="75"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">MongoDB</span><span class="skill-bar-pct">70%</span>
+        </div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="70"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">Azure</span><span class="skill-bar-pct">65%</span>
+        </div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="65"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">GCP</span><span class="skill-bar-pct">65%</span></div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="65"></div>
+        </div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-meta"><span class="skill-bar-name">Java / C</span><span class="skill-bar-pct">60%</span>
+        </div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" data-width="60"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arsenal-bio" data-animate="fade-up" style="--delay:0.4s">
+      <span class="terminal-prompt">&gt;</span>
+      Full Stack Developer focused on
+      <span class="highlight">Interactive UI</span> &amp;
+      <span class="highlight">Scalable Systems</span>.
+      I build.
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <section id="case-files" class="casefiles-section">
+    <div class="section-label">EXPERIENCE</div>
+    <h2 class="section-title" data-animate="fade-up">WORK EXPERIENCE</h2>
+    <p class="section-sub" data-animate="fade-up" style="--delay:0.1s">PROFESSIONAL EMPLOYMENT RECORD</p>
+
+    <div class="case-card" data-animate="fade-left" style="--delay:0.2s">
+      <div class="classified-stamp">CLASSIFIED</div>
+      <div class="case-header">
+        <div class="case-meta">
+          <span class="case-number">CASE #<span id="case-counter">000</span></span>
+          <span class="case-duration">JUL 2025 — PRESENT</span>
+        </div>
+        <div class="case-status-badge">ACTIVE</div>
+      </div>
+      <h3 class="case-company">ZYNOVA REMEDIES</h3>
+      <p class="case-company-full">Zynova Remedies Private Limited</p>
+      <p class="case-role">◆ Full Stack Engineer</p>
+      <div class="case-tech-tags">
+        <span class="tech-tag">React.js</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Django</span>
+        <span class="tech-tag">Azure</span>
+      </div>
+      <ul class="case-points">
+        <li>→ Engineered and deployed full-stack web applications using React.js and Node.js, serving production
+          healthcare workflows</li>
+        <li>→ Architected scalable REST APIs and integrated cloud services on Microsoft Azure for high-availability
+          deployments</li>
+        <li>→ Built automated data pipelines with Python/Django reducing manual reporting overhead by significant
+          margins</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects-section">
+    <div class="section-label">PROJECTS</div>
+    <h2 class="section-title" data-animate="fade-up">MY PROJECTS</h2>
+    <p class="section-sub" data-animate="fade-up" style="--delay:0.1s">BUILT, SHIPPED &amp; DEPLOYED</p>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 — Music Streaming App -->
+      <div class="project-card-wrapper" data-animate="fade-up" style="--delay:0.1s">
+        <div class="project-card-flipper">
+          <div class="project-face project-front">
+            <div class="project-img-placeholder">
+              <div class="code-preview" data-project="1">
+                <div class="code-preview-bar">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <span class="code-filename">server.js</span>
+                </div>
+                <div class="code-preview-body">
+                  <span class="code-line" style="--line-index:0"><span class="cl-kw">const</span> <span
+                      class="cl-var">express</span> = require(<span class="cl-str">'express'</span>);</span>
+                  <span class="code-line" style="--line-index:1"><span class="cl-comment">// iTunes Search API — no key
+                      needed</span></span>
+                  <span class="code-line" style="--line-index:2"><span class="cl-var">app</span>.<span
+                      class="cl-fn">get</span>(<span class="cl-str">'/api/search'</span>, <span
+                      class="cl-kw">async</span> (req, res) => {</span>
+                  <span class="code-line" style="--line-index:3">&nbsp;&nbsp;<span class="cl-kw">const</span> <span
+                      class="cl-var">q</span> = req.query.<span class="cl-var">term</span>;</span>
+                  <span class="code-line" style="--line-index:4">&nbsp;&nbsp;<span class="cl-kw">const</span> <span
+                      class="cl-var">data</span> = <span class="cl-kw">await</span> <span
+                      class="cl-fn">itunesSearch</span>(<span class="cl-var">q</span>);</span>
+                  <span class="code-line" style="--line-index:5">&nbsp;&nbsp;res.<span class="cl-fn">json</span>(<span
+                      class="cl-var">data</span>.results);</span>
+                  <span class="code-line" style="--line-index:6">}); <span class="cl-dim">// 30s previews, zero API
+                      keys</span></span>
+                  <span class="code-line" style="--line-index:7"><span class="cl-dim">// ▪ MVC ▪ Vercel ▪ iTunes
+                      API</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="hud-tag">Node.js</span><span class="hud-tag">Express</span><span class="hud-tag">iTunes
+                  API</span><span class="hud-tag">Vercel</span>
+              </div>
+              <h3 class="project-title">Music Player Pro</h3>
+              <p class="project-desc">Professional web music player with MVC architecture. Spinning vinyl album art,
+                animated equalizers, keyboard shortcuts, theme toggle, and iTunes API for 30-second previews — zero API
+                keys needed.</p>
+              <div class="project-ctas">
+                <a href="https://music-application-9hkb1x1me-papil001s-projects.vercel.app/" class="project-btn"
+                  id="proj1-deploy" target="_blank" rel="noopener">[LIVE DEMO]</a>
+                <a href="https://github.com/PAPIL001/Music-Application" class="project-btn project-btn-secondary"
+                  id="proj1-source" target="_blank" rel="noopener">[SOURCE CODE]</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-face project-back">
+            <div class="dossier-header"><span class="dossier-label">INTELLIGENCE FILE</span><span
+                class="dossier-id">FILE #001</span></div>
+            <h3 class="dossier-title">Music Player Pro</h3>
+            <div class="dossier-stats">
+              <div class="dossier-stat"><span class="dossier-stat-val">MVC</span><span
+                  class="dossier-stat-key">ARCHITECTURE</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">VERCEL</span><span
+                  class="dossier-stat-key">DEPLOYED ON</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">LIVE</span><span
+                  class="dossier-stat-key">STATUS</span></div>
+            </div>
+            <p class="dossier-detail">Spinning vinyl art, animated equalizer bars, keyboard shortcuts (Space/Arrows),
+              dark/red theme toggle, iTunes 30s previews, shuffle & repeat — zero API keys required.</p>
+            <div class="dossier-stack"><span class="hud-tag">Node.js</span><span class="hud-tag">Express</span><span
+                class="hud-tag">iTunes API</span><span class="hud-tag">Vanilla JS</span><span
+                class="hud-tag">CSS3</span></div>
+            <div class="dossier-links">
+              <a href="https://music-application-9hkb1x1me-papil001s-projects.vercel.app/" class="project-btn"
+                target="_blank" rel="noopener">[LIVE DEMO]</a>
+              <a href="https://github.com/PAPIL001/Music-Application" class="project-btn project-btn-secondary"
+                target="_blank" rel="noopener">[SOURCE CODE]</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 — EntityGraph AI -->
+      <div class="project-card-wrapper" data-animate="fade-up" style="--delay:0.2s">
+        <div class="project-card-flipper">
+          <div class="project-face project-front">
+            <div class="project-img-placeholder">
+              <div class="code-preview" data-project="2">
+                <div class="code-preview-bar">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <span class="code-filename">fetch_pubmed.py</span>
+                </div>
+                <div class="code-preview-body">
+                  <span class="code-line" style="--line-index:0"><span class="cl-kw">import</span> <span
+                      class="cl-var">requests</span>, <span class="cl-var">argparse</span>, <span
+                      class="cl-var">csv</span></span>
+                  <span class="code-line" style="--line-index:1"><span class="cl-comment"># Fetch papers via PubMed
+                      E-utilities API</span></span>
+                  <span class="code-line" style="--line-index:2"><span class="cl-kw">def</span> <span
+                      class="cl-fn">fetch_papers</span>(query: <span class="cl-str">str</span>) -> <span
+                      class="cl-var">list</span>:</span>
+                  <span class="code-line" style="--line-index:3">&nbsp;&nbsp;<span class="cl-var">url</span> = <span
+                      class="cl-str">f"https://eutils.ncbi.nlm.nih.gov/.../esearch.fcgi"</span></span>
+                  <span class="code-line" style="--line-index:4">&nbsp;&nbsp;<span class="cl-var">res</span> =
+                    requests.<span class="cl-fn">get</span>(url, params={<span class="cl-str">'term'</span>: query,
+                    <span class="cl-str">'retmode'</span>: <span class="cl-str">'json'</span>})</span>
+                  <span class="code-line" style="--line-index:5">&nbsp;&nbsp;<span class="cl-kw">return</span> <span
+                      class="cl-fn">extract_details</span>(<span class="cl-var">res</span>.json())</span>
+                  <span class="code-line" style="--line-index:6"><span class="cl-dim"># ▪ Python CLI ▪ E-utilities API ▪
+                      Poetry</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="hud-tag">Python</span><span class="hud-tag">API</span><span class="hud-tag">CLI</span>
+              </div>
+              <h3 class="project-title">PubMed Paper Fetcher</h3>
+              <p class="project-desc">A Python command-line tool to fetch research papers from PubMed via the
+                E-utilities API. Extracts titles, publication dates, and company affiliations to CSV.</p>
+              <div class="project-ctas">
+                <a href="https://github.com/PAPIL001/PubMed-Fetcher" class="project-btn project-btn-secondary"
+                  id="proj2-source" target="_blank" rel="noopener" style="width: 100%; text-align: center;">[SOURCE
+                  CODE]</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-face project-back">
+            <div class="dossier-header"><span class="dossier-label">INTELLIGENCE FILE</span><span
+                class="dossier-id">FILE #002</span></div>
+            <h3 class="dossier-title">PubMed Fetcher</h3>
+            <div class="dossier-stats">
+              <div class="dossier-stat"><span class="dossier-stat-val">CLI</span><span
+                  class="dossier-stat-key">INTERFACE</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">POETRY</span><span class="dossier-stat-key">PKG
+                  MANAGER</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">OFFLINE</span><span
+                  class="dossier-stat-key">DEPLOY STATUS</span></div>
+            </div>
+            <p class="dossier-detail">Command-line tool utilizing elementTree and Regex to parse PubMed XML data.
+              Features debug mode and automated CSV exporting for company-affiliated authors.</p>
+            <div class="dossier-stack"><span class="hud-tag">Python</span><span class="hud-tag">Requests</span><span
+                class="hud-tag">E-utilities API</span><span class="hud-tag">Poetry</span></div>
+            <div class="dossier-links">
+              <a href="https://github.com/PAPIL001/PubMed-Fetcher" class="project-btn project-btn-secondary"
+                target="_blank" rel="noopener" style="width: 100%; text-align: center;">[SOURCE CODE]</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 — Healthcare Platform -->
+      <div class="project-card-wrapper" data-animate="fade-up" style="--delay:0.3s">
+        <div class="project-card-flipper">
+          <div class="project-face project-front">
+            <div class="project-img-placeholder">
+              <div class="code-preview" data-project="3">
+                <div class="code-preview-bar">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <span class="code-filename">index.html</span>
+                </div>
+                <div class="code-preview-body">
+                  <span class="code-line" style="--line-index:0">&lt;<span class="cl-kw">div</span> <span
+                      class="cl-var">class</span>="<span class="cl-str">donation-popup</span>" <span
+                      class="cl-var">id</span>="<span class="cl-str">donate-modal</span>"&gt;</span>
+                  <span class="code-line" style="--line-index:1">&nbsp;&nbsp;&lt;<span class="cl-kw">h3</span>&gt;Help
+                    Our 280+ Rescues&lt;/<span class="cl-kw">h3</span>&gt;</span>
+                  <span class="code-line" style="--line-index:2">&nbsp;&nbsp;&lt;<span class="cl-kw">p</span>&gt;Scan to
+                    support Pawsome Foundation&lt;/<span class="cl-kw">p</span>&gt;</span>
+                  <span class="code-line" style="--line-index:3">&nbsp;&nbsp;&lt;<span class="cl-kw">img</span> <span
+                      class="cl-var">src</span>="<span class="cl-str">assets/qr-code/donate.png</span>" <span
+                      class="cl-var">alt</span>="<span class="cl-str">Donate QR</span>" /&gt;</span>
+                  <span class="code-line" style="--line-index:4">&nbsp;&nbsp;&lt;<span class="cl-kw">button</span> <span
+                      class="cl-var">class</span>="<span class="cl-str">close-btn</span>"&gt;Close&lt;/<span
+                      class="cl-kw">button</span>&gt;</span>
+                  <span class="code-line" style="--line-index:5">&lt;/<span class="cl-kw">div</span>&gt;</span>
+                  <span class="code-line" style="--line-index:6"><span class="cl-dim">&lt;!-- ▪ HTML5 ▪ CSS3 ▪ Vanilla
+                      JS --&gt;</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="hud-tag">HTML5</span><span class="hud-tag">CSS3</span><span
+                  class="hud-tag">JavaScript</span><span class="hud-tag">Vercel</span>
+              </div>
+              <h3 class="project-title">Pawsome Foundation</h3>
+              <p class="project-desc">Responsive digital presence for a non-profit animal rescue and rehabilitation
+                sanctuary in Lucknow, India. Features an interactive UI and instant donation QR popup.</p>
+              <div class="project-ctas">
+                <a href="https://pawsome-foundation.vercel.app/" class="project-btn" id="proj3-deploy" target="_blank"
+                  rel="noopener">[LIVE DEMO]</a>
+                <a href="https://github.com/PAPIL001/Pawsome-Foundation" class="project-btn project-btn-secondary"
+                  id="proj3-source" target="_blank" rel="noopener">[SOURCE CODE]</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-face project-back">
+            <div class="dossier-header"><span class="dossier-label">INTELLIGENCE FILE</span><span
+                class="dossier-id">FILE #003</span></div>
+            <h3 class="dossier-title">Pawsome Foundation</h3>
+            <div class="dossier-stats">
+              <div class="dossier-stat"><span class="dossier-stat-val">280+</span><span class="dossier-stat-key">ANIMALS
+                  HOUSED</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">CSR</span><span
+                  class="dossier-stat-key">ARCHITECTURE</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">LIVE</span><span class="dossier-stat-key">DEPLOY
+                  STATUS</span></div>
+            </div>
+            <p class="dossier-detail">Fully responsive frontend-only application using semantic HTML5, CSS3
+              Grid/Flexbox, and vanilla Javascript for dynamic active states and donation popup handling. Deployed on
+              Vercel.</p>
+            <div class="dossier-stack"><span class="hud-tag">Frontend</span><span class="hud-tag">CSS3</span><span
+                class="hud-tag">Vanilla JS</span><span class="hud-tag">Vercel</span></div>
+            <div class="dossier-links">
+              <a href="https://pawsome-foundation.vercel.app/" class="project-btn" target="_blank" rel="noopener">[LIVE
+                DEMO]</a>
+              <a href="https://github.com/PAPIL001/Pawsome-Foundation" class="project-btn project-btn-secondary"
+                target="_blank" rel="noopener">[SOURCE CODE]</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 — Data Pipeline -->
+      <div class="project-card-wrapper" data-animate="fade-up" style="--delay:0.4s">
+        <div class="project-card-flipper">
+          <div class="project-face project-front">
+            <div class="project-img-placeholder">
+              <div class="code-preview" data-project="4">
+                <div class="code-preview-bar">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <span class="code-filename">script.js</span>
+                </div>
+                <div class="code-preview-body">
+                  <span class="code-line" style="--line-index:0"><span class="cl-kw">const</span> <span
+                      class="cl-var">checkDraw</span> = () => {</span>
+                  <span class="code-line" style="--line-index:1">&nbsp;&nbsp;<span class="cl-kw">let</span> <span
+                      class="cl-var">isDraw</span> = <span class="cl-green">true</span>;</span>
+                  <span class="code-line" style="--line-index:2">&nbsp;&nbsp;<span
+                      class="cl-var">boxes</span>.forEach((<span class="cl-var">box</span>) => {</span>
+                  <span class="code-line" style="--line-index:3">&nbsp;&nbsp;&nbsp;&nbsp;<span class="cl-kw">if</span>
+                    (<span class="cl-var">box</span>.innerText === <span class="cl-str">""</span>) <span
+                      class="cl-var">isDraw</span> = <span class="cl-green">false</span>;</span>
+                  <span class="code-line" style="--line-index:4">&nbsp;&nbsp;});</span>
+                  <span class="code-line" style="--line-index:5">&nbsp;&nbsp;<span class="cl-kw">if</span> (<span
+                      class="cl-var">isDraw</span> && !<span class="cl-var">winnerFound</span>) <span
+                      class="cl-fn">showDraw</span>();</span>
+                  <span class="code-line" style="--line-index:6">}; <span class="cl-dim">// ▪ Vanilla JS ▪ DOM
+                      Manipulation</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="hud-tag">HTML5</span><span class="hud-tag">CSS3</span><span
+                  class="hud-tag">JavaScript</span>
+              </div>
+              <h3 class="project-title">Tic Tac Toe Game</h3>
+              <p class="project-desc">An interactive turn-based Tic Tac Toe game with winner and draw detection logic,
+                "New Game" functionality, and a clean, responsive user interface built from scratch.</p>
+              <div class="project-ctas">
+                <a href="https://papil001.github.io/TIC-TAC-TOE-GAME-/" class="project-btn" id="proj4-deploy"
+                  target="_blank" rel="noopener">[LIVE DEMO]</a>
+                <a href="https://github.com/PAPIL001/TIC-TAC-TOE-GAME-" class="project-btn project-btn-secondary"
+                  id="proj4-source" target="_blank" rel="noopener">[SOURCE CODE]</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-face project-back">
+            <div class="dossier-header"><span class="dossier-label">INTELLIGENCE FILE</span><span
+                class="dossier-id">FILE #004</span></div>
+            <h3 class="dossier-title">Tic Tac Toe</h3>
+            <div class="dossier-stats">
+              <div class="dossier-stat"><span class="dossier-stat-val">DOM</span><span
+                  class="dossier-stat-key">MANIPULATION</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">GH PAGES</span><span
+                  class="dossier-stat-key">DEPLOYED ON</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">LIVE</span><span
+                  class="dossier-stat-key">STATUS</span></div>
+            </div>
+            <p class="dossier-detail">A practice project focusing on front-end skills, event handling, and conditional
+              real-world problem-solving (specifically handling edge cases for draw conditions).</p>
+            <div class="dossier-stack"><span class="hud-tag">HTML5</span><span class="hud-tag">CSS3</span><span
+                class="hud-tag">ES6</span><span class="hud-tag">GitHub Pages</span></div>
+            <div class="dossier-links">
+              <a href="https://papil001.github.io/TIC-TAC-TOE-GAME-/" class="project-btn" target="_blank"
+                rel="noopener">[LIVE DEMO]</a>
+              <a href="https://github.com/PAPIL001/TIC-TAC-TOE-GAME-" class="project-btn project-btn-secondary"
+                target="_blank" rel="noopener">[SOURCE CODE]</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 — Batman Portfolio -->
+      <div class="project-card-wrapper" data-animate="fade-up" style="--delay:0.5s">
+        <div class="project-card-flipper">
+          <div class="project-face project-front">
+            <div class="project-img-placeholder">
+              <div class="code-preview" data-project="5">
+                <div class="code-preview-bar">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <span class="code-filename">style.css</span>
+                </div>
+                <div class="code-preview-body">
+                  <span class="code-line" style="--line-index:0"><span class="cl-dim">/* Gotham Design System
+                      */</span></span>
+                  <span class="code-line" style="--line-index:1"><span class="cl-kw">:root</span> {</span>
+                  <span class="code-line" style="--line-index:2">&nbsp;&nbsp;<span class="cl-var">--bat-black</span>:
+                    <span class="cl-str">#0a0a0b</span>;</span>
+                  <span class="code-line" style="--line-index:3">&nbsp;&nbsp;<span class="cl-var">--bat-yellow</span>:
+                    <span class="cl-yellow">#f0c040</span>;</span>
+                  <span class="code-line" style="--line-index:4">&nbsp;&nbsp;<span class="cl-var">--font-display</span>:
+                    <span class="cl-str">'Bebas Neue'</span>;</span>
+                  <span class="code-line" style="--line-index:5">&nbsp;&nbsp;<span class="cl-var">--font-mono</span>:
+                    <span class="cl-str">'IBM Plex Mono'</span>;</span>
+                  <span class="code-line" style="--line-index:6">} <span class="cl-dim">/* ▪ GSAP ▪ tsParticles ▪ CSS3
+                      */</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="hud-tag">HTML5</span><span class="hud-tag">CSS3</span><span class="hud-tag">Vanilla
+                  JS</span><span class="hud-tag">GSAP</span>
+              </div>
+              <h3 class="project-title">Batman Portfolio</h3>
+              <p class="project-desc">The very portfolio you're viewing right now — a cinematic Gotham-noir experience
+                with GSAP animations, custom cursor, bat signal effects, and Gotham rain particles.</p>
+              <div class="project-ctas">
+                <a href="#" class="project-btn" id="proj5-deploy">[CURRENT SYSTEM]</a>
+                <a href="https://github.com/PAPIL001/Batman-Portfolio" class="project-btn project-btn-secondary"
+                  id="proj5-source" target="_blank" rel="noopener">[SOURCE CODE]</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-face project-back">
+            <div class="dossier-header"><span class="dossier-label">INTELLIGENCE FILE</span><span
+                class="dossier-id">FILE #005</span></div>
+            <h3 class="dossier-title">Batman Portfolio</h3>
+            <div class="dossier-stats">
+              <div class="dossier-stat"><span class="dossier-stat-val">~3,100</span><span class="dossier-stat-key">LINES
+                  OF CODE</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">SPA</span><span
+                  class="dossier-stat-key">ARCHITECTURE</span></div>
+              <div class="dossier-stat"><span class="dossier-stat-val">LIVE</span><span class="dossier-stat-key">DEPLOY
+                  STATUS</span></div>
+            </div>
+            <p class="dossier-detail">Zero-framework vanilla portfolio. Custom cursor, GSAP ScrollTrigger, tsParticles
+              rain, boot sequence, accessibility-compliant.</p>
+            <div class="dossier-stack"><span class="hud-tag">HTML5</span><span class="hud-tag">CSS3</span><span
+                class="hud-tag">GSAP</span><span class="hud-tag">tsParticles</span></div>
+            <div class="dossier-links">
+              <a href="#" class="project-btn">[CURRENT SYSTEM]</a>
+              <a href="https://github.com/PAPIL001/Batman-Portfolio" class="project-btn project-btn-secondary"
+                target="_blank" rel="noopener">[SOURCE CODE]</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="intel" class="intel-section">
+    <div class="section-label">ABOUT</div>
+    <h2 class="section-title" data-animate="fade-up">ABOUT ME</h2>
+    <p class="section-sub" data-animate="fade-up" style="--delay:0.1s">THE DEVELOPER BEHIND THE MASK</p>
+
+    <div class="intel-inner">
+      <!-- Left: Stats panel -->
+      <div class="intel-stats" data-animate="fade-up" style="--delay:0.2s">
+        <div class="intel-photo">
+          <img src="media/Dp.webp" alt="Papil Verma" />
+        </div>
+        <div class="stat-block">
+          <div class="stat-item">
+            <span class="stat-num" data-target="2">0</span>
+            <span class="stat-label">YEARS CODING</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="11">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">TECHNOLOGIES</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num stat-inf">∞</span>
+            <span class="stat-label">COFFEES CONSUMED</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Bio -->
+      <div class="intel-bio" data-animate="fade-left" style="--delay:0.3s">
+        <div class="intel-bio-text" id="typewriter-target">
           <p>
-            dshalkwdjpoladj <br />
-            sfsdfsfefs <br />
-            sfdsfsdfsfesfsef
+            Hello. I'm <span class="highlight">Papil Verma</span> — a Full Stack Developer operating out of Gotham City.
+            I specialize in building <span class="highlight">end-to-end web applications</span> that are fast, scalable,
+            and visually stunning.
+          </p>
+          <p>
+            My arsenal spans the full stack — from <span class="highlight">React &amp; Django</span> on the frontend and
+            backend,
+            to cloud deployments on <span class="highlight">Azure &amp; Google Cloud</span>.
+            I thrive in ambiguous, high-stakes environments where every line of code matters.
+          </p>
+          <p>
+            When I'm not engineering systems, I'm studying the craft — reading about distributed architectures,
+            experimenting with AI integrations, and occasionally watching <span class="highlight">The Dark Knight</span>
+            for the third time.
+          </p>
+          <p class="intel-tagline">
+            <span class="terminal-prompt">&gt;</span>
+            I don't just write code. <span class="highlight">I build solutions.</span>
           </p>
         </div>
-        <div class="header-bio">
-          <p>
-            Full Stack Developer focused on
-            <span class="highlight">Interactive UI</span> &
-            <span class="highlight">Scalable Systems</span>.
-            <br />
-            <span class="aura-text">I build.</span>
-          </p>
-        </div>
-        <div class="buttons">
-          <div class="resume-btn">
-            <a
-              href="https://drive.google.com/file/d/1rmVV_Hu-P17HWaiYD48w9gHd3v1B1O4Y/view?usp=sharing"
-              class="resume-txt lead"
-              ><strong>Resume/CV</strong></a
-            >
-          </div>
-          <div class="contact-btn">
-            <a href="#" class="contact-txt lead"><strong>Contact</strong></a>
-          </div>
-        </div>
       </div>
     </div>
+  </section>
 
-    <!-- work experience -->
-    <div class="work-ex">
-      <h3 class="display-4">Work Experience</h3>
-
-      <div class="zynova">
-        <div class="logo">
-          <img src="" alt="zynova" />
-        </div>
-        <div class="duration">
-          <p><strong>July 2025 - Present</strong></p>
-        </div>
-        <div class="about">
-          <h5 class=".display-5">
-            <strong>Zynova Remedies Private Limited</strong>
-          </h5>
-          <p class="lead"><strong>Full Stack Engineer</strong></p>
-          <p class="tech"><strong>Technologies & Tools</strong></p>
-          <div class="tech-btns">
-            <a href="">tech 1</a>
-            <a href="">tech 2</a>
-            <a href="">tech 3</a>
-            <a href="">tech 4</a>
-          </div>
-          <div class="workex-about">
-            <ul>
-              <li>point 1</li>
-              <li>point 2</li>
-              <li>point 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- project section -->
-    <div class="projects">
-      <div class="project-heading">
-        <h3 class="display-4">Projects</h3>
-      </div>
-      <div class="project-details">
-        <div class="project-1">
-          <div class="card" style="width: 18rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card’s content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-2">
-          <div class="card" style="width: 18rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card’s content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-3">
-          <div class="card" style="width: 18rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card’s content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-4">
-          <div class="card" style="width: 18rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card’s content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-5">
-          <div class="card" style="width: 18rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card’s content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-6">
-          <div class="card" style="width: 18rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card’s content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- SIGNAL (CONTACT) -->
+  <section id="signal" class="signal-section">
+    <!-- Decorative bat signal bg -->
+    <div class="signal-bat-bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M 600,650 C 540,450 430,400 320,420 C 290,300 190,220 40,180 C 190,130 380,150 500,250 L 570,120 L 570,200 L 630,200 L 630,120 L 700,250 C 820,150 1010,130 1160,180 C 1010,220 910,300 880,420 C 770,400 660,450 600,650 Z"
+          fill="#000000" stroke="#e08a22" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="8" />
+      </svg>
+      <div class="signal-glow-ring"></div>
     </div>
 
-    <!-- about section -->
-    <div class="about-section">
-      <h3 class="display-4">About Me</h3>
-      <div class="about-content">
-      <p>
-        Hello! I'm Papil, Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur blanditiis magnam numquam ad porro iusto officiis expedita doloremque molestiae natus asperiores enim, quod similique aliquid harum nam repellat minima sequi magni eligendi dicta tempore. Doloremque quidem repellat tenetur nulla illum dicta incidunt, modi vitae repudiandae quas magni quia excepturi fugit?.
+    <div class="section-label">CONTACT</div>
+    <h2 class="section-title" data-animate="fade-up">GET IN TOUCH</h2>
+    <p class="section-sub" data-animate="fade-up" style="--delay:0.1s">OPEN TO OPPORTUNITIES — LET'S TALK</p>
+
+    <div class="signal-inner">
+      <p class="signal-tagline" data-animate="fade-up" style="--delay:0.2s">
+        I'm currently open to full-time roles and freelance projects.<br />
+        <span class="terminal-prompt">&gt;</span> Let's build something great together.
       </p>
+
+      <div class="signal-links" data-animate="fade-up" style="--delay:0.3s">
+        <a href="mailto:papil.verma.5@gmail.com" class="signal-link" id="sig-gmail">
+          <i class="fa-regular fa-envelope"></i>
+          <div class="signal-link-text">
+            <span class="signal-link-label">GMAIL</span>
+            <span class="signal-link-value">papil.verma.5@gmail.com</span>
+          </div>
+          <i class="fa-solid fa-chevron-right signal-arrow"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/papil-verma-0a0181337/" class="signal-link" id="sig-linkedin"
+          target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i>
+          <div class="signal-link-text">
+            <span class="signal-link-label">LINKEDIN</span>
+            <span class="signal-link-value">papil-verma-0a0181337</span>
+          </div>
+          <i class="fa-solid fa-chevron-right signal-arrow"></i>
+        </a>
+        <a href="https://github.com/PAPIL001" class="signal-link" id="sig-github" target="_blank" rel="noopener">
+          <i class="fa-brands fa-github"></i>
+          <div class="signal-link-text">
+            <span class="signal-link-label">GITHUB</span>
+            <span class="signal-link-value">github.com/PAPIL001</span>
+          </div>
+          <i class="fa-solid fa-chevron-right signal-arrow"></i>
+        </a>
+        <a href="https://leetcode.com/u/vpapil/" class="signal-link" id="sig-leetcode" target="_blank" rel="noopener">
+          <!-- LeetCode icon -->
+          <svg viewBox="0 0 24 24" fill="currentColor" width="1.4em" height="1.4em" style="flex-shrink:0"
+            aria-hidden="true">
+            <path
+              d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+          </svg>
+          <div class="signal-link-text">
+            <span class="signal-link-label">LEETCODE</span>
+            <span class="signal-link-value">leetcode.com/u/vpapil</span>
+          </div>
+          <i class="fa-solid fa-chevron-right signal-arrow"></i>
+        </a>
+      </div>
+
+      <div class="signal-email-copy" data-animate="fade-up" style="--delay:0.5s">
+        <span class="terminal-prompt">&gt;</span>
+        <span class="email-text">papil.verma.5@gmail.com</span>
+        <button class="copy-btn" id="copy-email-btn" aria-label="Copy email to clipboard">
+          <i class="fa-regular fa-copy"></i> COPY
+        </button>
       </div>
     </div>
 
-    <!-- contact-section -->
-    <div class="contact-section">
-      <h3 class="display-4">Contact</h3>
-      <p>Lets Build something great together.</p>
-      <div class="contact-buttons">
-        <p>Feel free to resond me on..</p>
-        <a href="">Gmail</a>
-        <a href="">LinkedIn</a>
-        <a href="">Github</a>
-        <a href="">Instagram</a>
-        <p class="gmail">Or Email: papil.verma.5@gmail.com <a href="">copy button</a></p>
+    <!-- Toast Notification -->
+    <div class="toast" id="copy-toast" role="alert" aria-live="polite">
+      <i class="fa-solid fa-check"></i>
+      COPIED TO CLIPBOARD
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-marquee-wrapper" aria-hidden="true">
+      <div class="footer-marquee">
+        <span>[ ALL CRIMINALS FEAR THE DARK — FULL STACK ENGINEER — GOTHAM CITY — PAPIL VERMA — BUILT WITH ⚡ &amp; ☕ —
+          ]&nbsp;&nbsp;&nbsp;</span>
+        <span>[ ALL CRIMINALS FEAR THE DARK — FULL STACK ENGINEER — GOTHAM CITY — PAPIL VERMA — BUILT WITH ⚡ &amp; ☕ —
+          ]&nbsp;&nbsp;&nbsp;</span>
       </div>
     </div>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2025 PAPIL VERMA</span>
+      <div class="footer-bat">
+        <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M 600,650 C 540,450 430,400 320,420 C 290,300 190,220 40,180 C 190,130 380,150 500,250 L 570,120 L 570,200 L 630,200 L 630,120 L 700,250 C 820,150 1010,130 1160,180 C 1010,220 910,300 880,420 C 770,400 660,450 600,650 Z"
+            fill="#000000" stroke="#e08a22" stroke-width="14" stroke-linejoin="miter" stroke-miterlimit="8" />
+        </svg>
+      </div>
+      <span class="footer-built">BUILT WITH ⚡ &amp; ☕</span>
+      <span class="footer-easter" aria-hidden="true">// try typing something</span>
+    </div>
+  </footer>
 
-    <!-- footer-section -->
-     <footer>
-      <p class="lead">I am HIM!</p>
-     </footer>
-  </body>
+
+  <!-- BAT TERMINAL EASTER EGG (F2) -->
+  <div id="bat-terminal" aria-hidden="true" role="dialog" aria-label="Bat-Computer Terminal">
+    <div class="terminal-header">
+      <div class="terminal-header-left">
+        <svg class="terminal-bat-icon" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M 600,650 C 540,450 430,400 320,420 C 290,300 190,220 40,180 C 190,130 380,150 500,250 L 570,120 L 570,200 L 630,200 L 630,120 L 700,250 C 820,150 1010,130 1160,180 C 1010,220 910,300 880,420 C 770,400 660,450 600,650 Z"
+            fill="none" stroke="#e08a22" stroke-width="40" />
+        </svg>
+        <span>BAT-COMPUTER v3.1 — WAYNE TECH SECURE SHELL</span>
+      </div>
+      <button class="terminal-close" id="terminal-close" aria-label="Close terminal">[ EXIT ]</button>
+    </div>
+    <div class="terminal-body" id="terminal-body">
+      <div class="terminal-output" id="terminal-output"></div>
+      <div class="terminal-input-row">
+        <span class="terminal-prompt-sym">BATMAN@GOTHAM:~$</span>
+        <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" />
+      </div>
+    </div>
+  </div>
+
+  <!-- DECRYPT OVERLAY (F11) -->
+  <div id="decrypt-overlay" aria-hidden="true">
+    <div class="decrypt-box">
+      <div class="decrypt-icon"><i class="fa-solid fa-lock-open"></i></div>
+      <div class="decrypt-text" id="decrypt-text">DECRYPTING CLASSIFIED FILE...</div>
+      <div class="decrypt-bar-track">
+        <div class="decrypt-bar-fill" id="decrypt-bar"></div>
+      </div>
+      <div class="decrypt-filename" id="decrypt-filename">resume_papil_verma.pdf</div>
+    </div>
+  </div>
+
+  <!-- JS Files -->
+  <script src="particles-config.js"></script>
+  <script src="script.js"></script>
+  <script src="enhancements.js"></script>
+</body>
+
 </html>
