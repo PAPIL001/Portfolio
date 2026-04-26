@@ -460,7 +460,7 @@ function initDecryptResume() {
   if (!resumeBtn || !overlay) return;
 
   const RESUME_URL =
-    "https://drive.google.com/file/d/1v0UAYsi8pGRpm0kp2YWDI_8EMG78uGmr/view?usp=sharing";
+    "https://drive.google.com/file/d/1oGGUNyJygLSxTadOQGtkW78tr0D0XQqY/view?usp=sharing";
   const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
   const MESSAGES = [
     "DECRYPTING CLASSIFIED FILE...",
