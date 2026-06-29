@@ -7,7 +7,7 @@
     <strong>A cinematic, Gotham-noir themed developer portfolio built with Vanilla HTML/CSS/JS.</strong>
   </p>
   
-  [![Live Demo](https://img.shields.io/badge/Live-Demo-22c55e?style=for-the-badge&logo=vercel)](https://portfolio-six-pi-dd5xa3wta1.vercel.app/)
+  [![Live Demo](https://img.shields.io/badge/Live-Demo-22c55e?style=for-the-badge&logo=vercel)](https://portfolio-chi-orcin-57.vercel.app/)
   [![GitHub License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 </div>
 
